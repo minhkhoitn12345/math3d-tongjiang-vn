@@ -11,12 +11,13 @@ Chạy `python tools/audit.py`. Trang là HTML/CSS/JavaScript tĩnh, không có 
 ```powershell
 cd D:\project3d\math3d-tongjiang-vn
 gh auth login --web
-gh repo create minhkhoitn12345/math3d-tongjiang-vn --public --source . --remote origin --push
+gh repo create minhkhoitn12345/math3d-tongjiang-vn --public
+git push -u origin main
 npx --yes vercel@59.0.0 login
 npx --yes vercel@59.0.0 deploy --prod --scope minhkhoitn12346
 ```
 
-Lệnh Vercel tạo và liên kết project trong lần triển khai đầu. Chọn tên `math3d-tongjiang-vn` nếu CLI hỏi. Sao chép URL production mà CLI in ra; URL thực chỉ có sau khi deploy thành công. Trước khi chạy `vercel git connect`, kiểm tra project Vercel đã tự kết nối GitHub chưa; nếu chưa, chạy:
+Remote `origin` đã được cấu hình sẵn trong Git local, vì vậy chỉ cần tạo repository trên GitHub rồi push. Nếu repository đã tồn tại, bỏ qua lệnh `gh repo create` và chỉ chạy `git push -u origin main` sau khi kiểm tra lịch sử remote. Lệnh Vercel tạo và liên kết project trong lần triển khai đầu. Chọn tên `math3d-tongjiang-vn` nếu CLI hỏi. Sao chép URL production mà CLI in ra; URL thực chỉ có sau khi deploy thành công. Trước khi chạy `vercel git connect`, kiểm tra project Vercel đã tự kết nối GitHub chưa; nếu chưa, chạy:
 
 ```powershell
 npx --yes vercel@59.0.0 git connect --scope minhkhoitn12346
