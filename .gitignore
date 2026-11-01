@@ -1,0 +1,7 @@
+.vercel/
+.env*
+!.env.example
+.tools/
+__pycache__/
+*.pyc
+deployment-url.txt

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071b22">
+  <meta name="description" content="Phòng thí nghiệm 3D Việt hoá: chạm, thay tham số và tự kiểm chứng các quy luật toán học trong hiện tượng thực tế.">
+  <title>Không gian Toán 3D · Phòng thí nghiệm tương tác</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./index.html" aria-label="Về trang chủ"><span class="brand-mark">∑</span><span>KHÔNG GIAN<br><strong>TOÁN 3D</strong></span></a>
+    <nav aria-label="Điều hướng"><a href="#kham-pha">Khám phá</a><a href="#cach-hoc">Cách học</a><a href="#nguon">Nguồn tài nguyên</a></nav>
+    <span class="top-note">PHÒNG THÍ NGHIỆM TƯƠNG TÁC</span>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="eyebrow"><span></span> TỪ HIỆN TƯỢNG ĐẾN CÔNG THỨC</div>
+        <h1 id="hero-title">Chạm vào mô hình.<br><em>Nhìn thấy quy luật.</em></h1>
+        <p>Điều chỉnh thí nghiệm 3D, dự đoán kết quả rồi kiểm chứng bằng số đo. Mỗi bài dẫn bạn đi qua một câu hỏi thực tế và một chuỗi thao tác rõ ràng.</p>
+        <div class="hero-actions"><a class="primary" href="#kham-pha">Chọn thí nghiệm <span aria-hidden="true">↗</span></a><a class="secondary" href="#cach-hoc">Xem cách học <span aria-hidden="true">↓</span></a></div>
+        <div class="hero-stats"><div><strong>06</strong><span>Bài học được tuyển chọn</span></div><div><strong>3D</strong><span>Mô hình có thể xoay và thử</span></div><div><strong>54</strong><span>Tài nguyên nguồn được giữ lại</span></div></div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="gridplane"></div><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="sphere"></div><div class="trajectory"><i></i><i></i><i></i><i></i><i></i></div><div class="equation">x = v₀t<br><span>y = ½gt²</span></div><div class="visual-caption">MÔ PHỎNG · DỰ ĐOÁN · KIỂM CHỨNG</div>
+      </div>
+    </section>
+
+    <section id="cach-hoc" class="method section-wrap" aria-labelledby="method-title">
+      <div class="section-head"><span class="section-kicker">CÁCH HỌC</span><h2 id="method-title">Tự tay tìm ra câu trả lời</h2><p>Bắt đầu từ điều bạn quan sát được, rồi mới đi tới công thức.</p></div>
+      <div class="method-steps"><article><span>01</span><h3>Dự đoán</h3><p>Đọc câu hỏi chính và nói trước điều bạn nghĩ sẽ xảy ra.</p></article><article><span>02</span><h3>Thay đổi</h3><p>Kéo một thanh điều khiển hoặc đổi một điều kiện trong mô hình 3D.</p></article><article><span>03</span><h3>Kiểm chứng</h3><p>So sánh số đo, xem kết luận và làm bài kiểm tra ngắn.</p></article></div>
+    </section>
+
+    <section id="kham-pha" class="explore section-wrap" aria-labelledby="explore-title">
+      <div class="section-head"><span class="section-kicker">CHỌN MỘT THẾ GIỚI</span><h2 id="explore-title">Thí nghiệm 3D</h2><p>Chọn chủ đề bạn muốn thử. Mỗi bài mở thành một phòng thí nghiệm riêng.</p></div>
+      <div class="filters" role="group" aria-label="Lọc chủ đề"><button type="button" class="active" data-filter="all" aria-pressed="true">Tất cả <b>6</b></button><button type="button" data-filter="motion" aria-pressed="false">Chuyển động</button><button type="button" data-filter="data" aria-pressed="false">Dữ liệu & ngẫu nhiên</button><button type="button" data-filter="nature" aria-pressed="false">Tự nhiên</button></div>
+      <div class="lesson-grid" id="lesson-grid"></div>
+    </section>
+
+    <section id="nguon" class="source section-wrap"><div><span class="section-kicker">TÀI NGUYÊN GỐC</span><h2>54 mô phỏng đã có sẵn</h2><p>Bản dự án này giữ các mô hình từ Tongjiang Lab để phát triển tiếp. Sáu bài liên quan đến toán học ở trên được ưu tiên Việt hoá phần điều hướng và lộ trình; những bài còn lại vẫn ở dạng nguồn để biên tập tiếp.</p></div><div class="source-actions"><a href="./nguon.html" id="all-lessons">Xem danh sách 54 bài <span aria-hidden="true">↗</span></a><small>Ghi công: Tongjiang Lab · CC BY-NC 4.0</small></div></section>
+  </main>
+  <footer><span>KHÔNG GIAN TOÁN 3D</span><span>Dựa trên <a href="https://lab.tongjiang.app" target="_blank" rel="noopener noreferrer">Tongjiang Lab</a> · <a href="./LICENSE">Giấy phép CC BY-NC 4.0</a></span></footer>
+</body>
+</html>

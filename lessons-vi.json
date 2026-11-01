@@ -1,0 +1,94 @@
+{
+  "projectile-step": {
+    "title": "Khám phá chuyển động ném ngang",
+    "question": "Từ máng phóng và tấm chắn, làm sao tách chuyển động ngang và rơi tự do để tìm vận tốc ban đầu?",
+    "steps": [
+      "Làm quen dụng cụ",
+      "Xét chuyển động thẳng đứng",
+      "Chỉnh đầu máng nằm ngang",
+      "Ghi bốn vị trí",
+      "Xác định khoảng thời gian",
+      "Chuyển động ngang đều",
+      "Thay vị trí thả",
+      "Hai nguồn sai số",
+      "Tự kiểm tra"
+    ],
+    "summary": "Tách một chuyển động thành hai phương độc lập: x = v₀t, y = ½gt²."
+  },
+  "centripetal-step": {
+    "title": "Lực hướng tâm: khối lượng, bán kính, tốc độ góc",
+    "question": "Dùng hai thước đo trên máy quay để suy ra lực hướng tâm phụ thuộc vào m, r và ω như thế nào?",
+    "steps": [
+      "Làm quen máy quay",
+      "Kiểm tra thiết bị",
+      "Thay khối lượng",
+      "Thay bán kính",
+      "Thay tốc độ góc",
+      "Ghép thành công thức",
+      "Sai số và thao tác sai",
+      "Tự kiểm tra: ω bình phương"
+    ],
+    "summary": "Giữ cố định hai đại lượng, thay đại lượng còn lại để tìm F = mω²r."
+  },
+  "accel-force-step": {
+    "title": "Gia tốc, lực và khối lượng",
+    "question": "Từ băng giấy và các quả cân, làm sao tìm được quan hệ giữa gia tốc, lực và khối lượng?",
+    "steps": [
+      "Làm quen dụng cụ",
+      "Bù lực cản",
+      "Ghi băng giấy",
+      "Tính gia tốc",
+      "Quan hệ a và F",
+      "Quan hệ a và m",
+      "Phân tích sai số",
+      "Tự kiểm tra"
+    ],
+    "summary": "Điều khiển từng biến, đo gia tốc trên băng giấy và kiểm chứng a = F/m."
+  },
+  "energy-step": {
+    "title": "Kiểm chứng định luật bảo toàn cơ năng",
+    "question": "Khi vật rơi, thế năng giảm có chuyển hết thành động năng tăng không? Băng giấy giúp kiểm chứng ra sao?",
+    "steps": [
+      "Làm quen dụng cụ",
+      "Bật máy rồi thả vật",
+      "Chọn các điểm đo",
+      "Đo h và tính v",
+      "Ghi số liệu, vẽ đồ thị",
+      "Thay vật nặng",
+      "Phân tích sai số",
+      "Tự kiểm tra"
+    ],
+    "summary": "So sánh gh với ½v², rồi giải thích phần chênh lệch do lực cản."
+  },
+  "brownian-step": {
+    "title": "Chuyển động Brown và khuếch tán",
+    "question": "Không nhìn thấy phân tử, ta có thể tìm dấu vết chuyển động hỗn loạn của chúng bằng cách nào?",
+    "steps": [
+      "Quan sát hạt chuyển động",
+      "Ghi một điểm mỗi 30 giây",
+      "So sánh quãng đi và độ dời",
+      "Thay kích thước hạt",
+      "Thay nhiệt độ",
+      "Giải thích va chạm",
+      "Một lần khác với thống kê",
+      "Quan sát khuếch tán",
+      "Tự kiểm tra"
+    ],
+    "summary": "Theo dõi nhiều lần thử để phân biệt đường đi ngẫu nhiên với quy luật thống kê."
+  },
+  "river-step": {
+    "title": "Dòng sông tạo nên địa hình",
+    "question": "Vì sao bờ sông ở một khúc uốn có thể dịch chuyển theo thời gian?",
+    "steps": [
+      "Quan sát sa bàn",
+      "Thung lũng chữ V",
+      "Mặt cắt thung lũng",
+      "Quạt bồi tích",
+      "Bờ lõm và bờ lồi",
+      "Bãi bồi ven sông",
+      "Đồng bằng châu thổ",
+      "Tự kiểm tra: mùa lũ"
+    ],
+    "summary": "Quan sát độ dốc, vận tốc dòng chảy, xói mòn và bồi tụ trên sa bàn 3D."
+  }
+}

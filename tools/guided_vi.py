@@ -1,0 +1,138 @@
+"""Vietnamese learner-facing question and action for six curated lessons.
+
+Entries follow the step order in catalog.json. Longer expectations and teacher
+notes in the upstream bundles are intentionally left for later editorial work.
+"""
+
+GUIDED = {
+    "projectile-step": [
+        ("Các dụng cụ trên bàn dùng để làm gì? Vì sao thí nghiệm không có đồng hồ?", "Xoay bàn thí nghiệm: tìm vạch thả, đầu máng, viên bi, vết trên giấy, tấm chắn và giấy ô."),
+        ("Bi A được phóng ngang, bi B được thả rơi cùng lúc. Bi nào chạm đất trước?", "Chạm chiếc búa trong mô hình 3D rồi quan sát thời điểm A và B chạm giá đỡ."),
+        ("Vì sao đầu máng phải nằm ngang? Điều gì thay đổi nếu đầu máng hơi ngẩng lên?", "Chỉnh đầu máng về ngang; sau đó so sánh với trường hợp đầu máng ngẩng lên."),
+        ("Vì sao chọn bốn độ cao của tấm chắn theo tỉ lệ 1 : 4 : 9 : 16?", "Đưa tấm chắn qua bốn nấc. Ở mỗi nấc, nhấn “Ghi một lượt” để lưu một vị trí."),
+        ("Không có đồng hồ, làm sao tìm thời gian rơi đến từng vị trí?", "Quan sát bốn điểm trên giấy ô và so sánh độ rơi theo phương đứng."),
+        ("Trong những khoảng thời gian bằng nhau, bi đi ngang những quãng bằng nhau không?", "Chuyển đồ thị sang chế độ kiểm tra; xem bốn điểm có nằm trên đường thẳng qua gốc không."),
+        ("Thả bi từ vạch khác thì bốn điểm và độ cong quỹ đạo thay đổi thế nào?", "Chuyển sang vạch thả số ③, ghi lại bốn nấc chắn và so sánh parabol."),
+        ("Đầu máng lệch và bán kính viên bi làm số đo v₀ sai theo hướng nào?", "Bật chế độ dụng cụ thật, rồi thử đầu máng ngẩng; cuối cùng bật cả hai để so sánh."),
+        ("Chỉ dùng máng, giấy và tấm chắn, bạn có đo được v₀ mà không cần đồng hồ?", "Ghi bốn nấc với cùng một vạch thả; giữ độ chênh giữa bốn giá trị v₀ dưới 3%."),
+    ],
+    "centripetal-step": [
+        ("Tay quay, dây đai, hai viên bi và hai thước đo liên quan với nhau thế nào?", "Xoay mô hình để lần theo tay quay → ròng rọc → dây đai → đĩa quay → viên bi → thước."),
+        ("Nếu hai viên bi có cùng m, r và ω, hai thước phải cho kết quả gì?", "Đưa hai bên về cùng khối lượng, cùng bán kính 4 cm và dây đai ở nấc I."),
+        ("Chỉ tăng khối lượng thì số vạch đo lực thay đổi theo tỉ lệ nào?", "Ghi ba lượt: trái nhẹ hơn, hai bên bằng nhau, rồi trái nặng hơn; giữ r và ω cố định."),
+        ("Tăng bán kính lên gấp đôi thì lực tăng gấp đôi hay gấp bốn?", "Chuyển viên bi từ bán kính 4 cm sang 6 cm rồi 8 cm; so sánh số vạch."),
+        ("Tăng tốc độ góc gấp hai, gấp ba thì lực tăng bao nhiêu lần?", "Ghi ba lượt với dây đai ở nấc I, II và III; giữ khối lượng và bán kính."),
+        ("Ghép ba quan hệ riêng thành một công thức như thế nào?", "Điều chỉnh ba tỉ số sao cho tích bằng 1 dù ít nhất hai nấc khác mặc định."),
+        ("Dây đai tuột hoặc trượt làm số vạch sai ra sao?", "Thử tháo dây đai, sau đó bật chế độ dụng cụ thật để quan sát trượt."),
+        ("Từ số vạch, bạn chứng minh được lực tỉ lệ với bình phương tốc độ góc không?", "Chỉ thay nấc dây đai và ghi đủ ba lượt; dừng ở nấc III trong 10 giây."),
+    ],
+    "accel-force-step": [
+        ("Xe, quả cân, ròng rọc và máy ghi chấm phối hợp để đo gia tốc thế nào?", "Xoay bàn thí nghiệm, lần theo dây từ quả cân qua ròng rọc đến xe và băng giấy."),
+        ("Nâng đầu ván bao nhiêu là vừa đủ bù ma sát?", "Bật nâng đầu ván và quan sát khi các chấm trên băng giấy cách đều nhau."),
+        ("Vì sao phải bật máy ghi chấm trước khi thả xe?", "Bật nguồn máy ghi chấm rồi quan sát dãy điểm khi xe chuyển động."),
+        ("Từ một băng giấy, làm sao suy ra gia tốc a?", "Đọc các khoảng chấm, vận tốc và độ dốc trên đồ thị v–t."),
+        ("Giữ m không đổi, tăng lực kéo thì a thay đổi theo quy luật nào?", "Giữ m = 0,360 kg; tăng số quả cân từ 1 đến 5 và ghi từng lượt."),
+        ("Giữ F không đổi, vẽ a theo m hay theo 1/m sẽ dễ thấy quy luật hơn?", "Giữ bốn quả cân kéo xe, thay khối lượng trên xe rồi chuyển trục ngang sang 1/m."),
+        ("Ván chưa được bù ma sát sẽ làm đồ thị a–F lệch gốc ra sao?", "Tắt bù ma sát và xem đồ thị a–F còn đi qua gốc tọa độ không."),
+        ("Từ độ dốc a–F, bạn suy ra khối lượng xe chính xác đến đâu?", "Bù ma sát, giữ m cố định và ghi ít nhất ba lực kéo; so với khối lượng trên cân."),
+    ],
+    "energy-step": [
+        ("Các dụng cụ nào giúp ghi vị trí và thời gian khi vật rơi?", "Xoay mô hình, lần theo giá đỡ, máy ghi chấm, băng giấy, kẹp và vật nặng."),
+        ("Bật máy trước hay thả vật trước?", "Bật nguồn máy ghi chấm trước, sau đó mới thả vật."),
+        ("Nên chọn điểm đo B ở đâu để tránh sai số lớn?", "Chuyển điểm B từ chấm thứ 4 đến chấm thứ 10 trở đi."),
+        ("Vận tốc tại B được tính từ những điểm nào?", "Quan sát A, B, C trên băng giấy và đo h_A, h_C bằng thước."),
+        ("Đồ thị ½v² theo h có dạng gì và độ dốc gần giá trị nào?", "Thay điểm B từ chấm 4 đến 13; mỗi điểm ghi một lượt, đủ bốn dòng."),
+        ("Thay khối lượng vật có làm h, v và độ dốc đồ thị thay đổi?", "Đổi vật từ 0,050 kg lên 0,500 kg và so sánh dữ liệu."),
+        ("Vì sao thế năng giảm có thể lớn hơn động năng tăng?", "So sánh chế độ lý tưởng, băng giấy thẳng và băng giấy lệch."),
+        ("Bạn đo được g từ độ dốc đồ thị mà không tính gia tốc trực tiếp?", "Ghi ít nhất ba điểm khác nhau cho cùng vật; giữ độ lệch độ dốc so với 9,8 m/s² dưới 2%."),
+    ],
+    "brownian-step": [
+        ("Vì sao hạt nhỏ trong chất lỏng tự đổi hướng liên tục?", "Chạm màn hình quan sát phía trước bên phải để mở hình ảnh huyền phù."),
+        ("Ghi vị trí hạt mỗi 30 giây thì đường nối các điểm trông ra sao?", "Tăng số lần ghi từ 4 lên 10 và quan sát đường gấp khúc trên giấy ô."),
+        ("Khi quan sát lâu hơn, bình phương độ dời trung bình thay đổi thế nào?", "Tăng số lần ghi lên 20; so sánh độ dời bình phương với tổng chiều dài đường đi."),
+        ("Hạt nhỏ hơn có chuyển động Brown rõ hơn không?", "Giảm bán kính hạt từ 0,5 xuống 0,2 μm và quan sát dấu vết."),
+        ("Tăng nhiệt độ từ 20 lên 100°C ảnh hưởng đến chuyển động ra sao?", "Kéo nhiệt độ từ 293 K lên 373 K và so sánh bình phương độ dời."),
+        ("Những va chạm không cân bằng làm hạt đổi hướng như thế nào?", "Chạm hạt trong khung phóng đại để dừng hình và xem phân tử va chạm từ các phía."),
+        ("Một hạt khác có cho đúng cùng một kết quả không?", "Chuyển từ hạt số ① sang ② và so sánh hai đường đi."),
+        ("Một giọt mực lan ra nước tĩnh bằng cách nào?", "Tăng thời gian quan sát từ 300 lên 1800 giây và xem vùng mực mở rộng."),
+        ("Làm sao đưa bình phương độ dời trung bình vượt 2000 μm²?", "Tăng nhiệt độ hoặc chọn hạt nhỏ hơn, rồi giữ giá trị trên 2000 μm²."),
+    ],
+    "river-step": [
+        ("Từ núi ra biển, dòng sông tạo nên những dạng địa hình nào?", "Kéo xoay sa bàn để quan sát toàn bộ con sông."),
+        ("Vì sao thung lũng ở núi thường sâu, hẹp và có mặt cắt chữ V?", "Đưa giai đoạn về thời kỳ đầu; xem tốc độ dòng chảy và cỡ đá có thể vận chuyển."),
+        ("Theo thời gian, thung lũng mở rộng và nông dần như thế nào?", "Kéo giai đoạn phát triển từ đầu đến cuối và nhìn mặt cắt phía trước."),
+        ("Khi ra khỏi núi, vì sao nước để lại những hạt đá lớn trước?", "Chuyển vị trí quan sát từ miền núi ra cửa núi, so sánh tốc độ và cỡ hạt."),
+        ("Ở khúc uốn, bờ nào bị xói và bờ nào được bồi?", "Đưa giai đoạn trở về thời kỳ giữa để thấy sông uốn cong."),
+        ("Nước lũ rút để lại gì bên bờ sông?", "Bật mùa lũ và xem nước tràn lên bãi bồi ven sông."),
+        ("Vì sao cửa sông tạo ra đồng bằng châu thổ?", "Đẩy giai đoạn tới thời kỳ cuối và xem bờ châu thổ tiến ra biển."),
+        ("Làm sao để dòng sông không còn chuyển được sỏi 10 mm?", "Thay giai đoạn hoặc lượng nước đầu nguồn để cỡ hạt tối đa dưới 10 mm trong 15 giây."),
+    ],
+}
+
+# Each pair is (observation to look for, takeaway). We summarize the upstream
+# longer explanations in language appropriate for students and preserve the
+# original numeric displays, formulas, quizzes and 3D code.
+OUTCOMES = {
+    "projectile-step": [
+        ("Nhìn thấy máng phóng, viên bi, tấm chắn và các dấu trên giấy; thời gian sẽ được suy ra từ độ rơi.", "Có thể ghi quỹ đạo bằng ảnh nhiều thời điểm hoặc lấy từng dấu riêng. Không nhất thiết phải đo thời gian trực tiếp."),
+        ("Hai viên bi A và B chạm giá đỡ cùng lúc khi được thả từ cùng độ cao.", "Chuyển động thẳng đứng của vật ném ngang giống rơi tự do và không phụ thuộc vận tốc ngang."),
+        ("Đầu máng nằm ngang thì bi ở miệng máng đứng yên trước khi thả; đầu máng ngẩng lên làm bi lăn ngược.", "Điều kiện v₀y = 0 là tiền đề của y = ½gt²; nếu sai điều kiện này, bài toán thành ném xiên."),
+        ("Bốn độ rơi theo tỉ lệ 1 : 4 : 9 : 16; giấy ghi bốn dấu ở vị trí ngang khác nhau.", "Vì y tỉ lệ với t², bốn độ cao này tương ứng với các thời điểm theo tỉ lệ 1 : 2 : 3 : 4."),
+        ("Từ độ rơi đầu tiên, tính được T ≈ 0,0639 s; các điểm tiếp theo cách nhau một khoảng T.", "Dùng phương đứng y = ½gt² để tạo mốc thời gian cho chuyển động ngang."),
+        ("Đồ thị vị trí ngang theo số khoảng thời gian gần là đường thẳng qua gốc.", "Các quãng ngang bằng nhau trong những thời gian bằng nhau: x = v₀t."),
+        ("Đổi vạch thả làm vận tốc đầu và độ cong quỹ đạo thay đổi.", "Quỹ đạo có dạng y = kx² với k = g/(2v₀²); v₀ lớn hơn thì parabol bẹt hơn."),
+        ("Dụng cụ thật và đầu máng lệch cho các giá trị v₀ không còn nhất quán.", "Kiểm tra giả thiết thí nghiệm trước khi dùng công thức; sai số có thể đến từ thiết bị và thao tác."),
+        ("Bốn phép đo cùng vạch thả cho các giá trị vận tốc đầu gần nhau.", "Từ x và y suy ra v₀ = x√(g/2y); các phép đo lặp giúp đánh giá độ tin cậy."),
+    ],
+    "centripetal-step": [
+        ("Các bộ phận truyền chuyển động từ tay quay đến hai bi; thước cho số vạch tỉ lệ với lực.", "Lực hướng tâm trong máy là lực do bộ phận giữ bi tạo ra; thước giúp so sánh tỉ số lực."),
+        ("Khi hai bên có cùng m, r, ω, hai thước cùng chiều cao và tỉ số vạch là 1.", "Muốn xét tác động của một biến, trước tiên phải đưa các biến khác về cùng điều kiện."),
+        ("Khi khối lượng trái gấp đôi, số vạch bên trái xấp xỉ gấp đôi.", "Giữ r và ω không đổi thì F tỉ lệ thuận với m."),
+        ("Bán kính 4, 6, 8 cm cho số vạch tăng theo tỉ lệ 1 : 1,5 : 2.", "Giữ m và ω không đổi thì F tỉ lệ thuận với r, không phải r²."),
+        ("Tốc độ góc gấp 2 và 3 lần làm lực tăng 4 và 9 lần.", "Giữ m và r không đổi thì F tỉ lệ với ω²."),
+        ("Có thể đổi nhiều tham số mà hai thước vẫn cho cùng tỉ số nếu các tác động bù trừ.", "Ghép ba quan hệ: F = mω²r = mv²/r, với v = ωr."),
+        ("Dây tuột làm bi không quay; dây trượt làm tỉ số thực tế lệch dự đoán lý tưởng.", "Mô hình lý tưởng có điều kiện áp dụng; dụng cụ thật cần xét sai số truyền động."),
+        ("Ba lượt ghi ứng với các nấc dây đai cho thấy bình phương tỉ số tốc độ góc quyết định tỉ số lực.", "Kết luận về ω² phải dựa trên nhiều phép đo khi m và r được giữ cố định."),
+    ],
+    "accel-force-step": [
+        ("Băng giấy ghi dãy chấm theo thời gian khi xe được kéo bởi quả cân.", "Từ khoảng cách các chấm và chu kỳ máy, có thể tính vận tốc và gia tốc."),
+        ("Khi nâng ván vừa đủ, xe không tự tăng hoặc giảm tốc rõ rệt vì ma sát đã được bù.", "Cân bằng lực cản trước khi khảo sát quan hệ giữa lực kéo và gia tốc."),
+        ("Bật máy trước sẽ ghi được cả giai đoạn xe bắt đầu chuyển động.", "Thứ tự thao tác quyết định độ đầy đủ của dữ liệu đo."),
+        ("Các vận tốc tính từ băng giấy tạo gần một đường thẳng trên đồ thị v–t.", "Gia tốc bằng độ dốc của đồ thị vận tốc theo thời gian."),
+        ("Tăng lực kéo trong khi giữ khối lượng xe làm gia tốc tăng gần tuyến tính.", "Khi m không đổi, a ∝ F; độ dốc đồ thị a–F xấp xỉ 1/m."),
+        ("Tăng khối lượng xe ở cùng lực kéo làm gia tốc giảm; đồ thị a–1/m gần là đường thẳng.", "Khi F không đổi, a ∝ 1/m; kết hợp với a ∝ F được a = F/m."),
+        ("Bù ma sát sai làm đồ thị a–F lệch khỏi gốc hoặc sai độ dốc.", "Một điểm đo có vẻ hợp lý chưa đủ; dạng đồ thị giúp phát hiện sai số hệ thống."),
+        ("Từ nhiều lực kéo, độ dốc cho khối lượng gần giá trị đo bằng cân.", "Dùng thí nghiệm để suy ra tham số chưa biết và đối chiếu phép đo độc lập."),
+    ],
+    "energy-step": [
+        ("Máy ghi chấm tạo các dấu thời gian đều trên băng giấy nối với vật rơi.", "Băng giấy cho phép đo độ cao và ước lượng vận tốc tại nhiều vị trí."),
+        ("Bật máy rồi thả vật sẽ giữ được các chấm ở giai đoạn đầu.", "Ghi dữ liệu đầy đủ trước khi so sánh năng lượng ở các vị trí."),
+        ("Các chấm quá sát nhau gần điểm đầu dễ gây sai số đọc lớn; chọn điểm B xa hơn.", "Điểm đo phải đủ cách biệt để sai số tương đối nhỏ hơn."),
+        ("Dùng độ cao tại A và C ở hai phía của B để tính vận tốc tại B.", "Với các khoảng thời gian đều, v_B ≈ (h_C − h_A)/(2T)."),
+        ("Các điểm ½v² theo h gần xếp thành đường thẳng; độ dốc gần g.", "Nếu cơ năng gần bảo toàn thì ½v² ≈ gh; độ dốc đồ thị cho một cách ước lượng g."),
+        ("Đổi khối lượng không làm quan hệ ½v²–h đổi đáng kể trong trường hợp lý tưởng.", "Khối lượng triệt tiêu khi so sánh động năng và thế năng theo mỗi đơn vị khối lượng."),
+        ("Băng giấy lệch hoặc lực cản làm ½v² nhỏ hơn gh.", "Phần thế năng không thành động năng đã chuyển sang dạng năng lượng khác do lực cản."),
+        ("Nhiều điểm đo cùng nằm gần đường thẳng có độ dốc khoảng 9,8 m/s².", "Một định luật vật lý được kiểm chứng tốt hơn bằng nhiều điểm và phân tích sai số."),
+    ],
+    "brownian-step": [
+        ("Hạt lơ lửng đổi hướng thất thường dưới kính hiển vi.", "Các phân tử chất lỏng va vào hạt từ nhiều phía và tạo chuyển động Brown."),
+        ("Các vị trí lấy mẫu nối lại thành đường gấp khúc không đều.", "Đường nối điểm là bản ghi theo từng khoảng 30 giây, không phải quỹ đạo liên tục thực tế."),
+        ("Quan sát lâu hơn thường làm bình phương độ dời trung bình tăng, nhưng từng đường đi vẫn khác nhau.", "Quy luật thống kê xuất hiện từ nhiều phép thử, không thể suy từ một lần quan sát."),
+        ("Hạt nhỏ hơn thường dịch chuyển rõ hơn trong cùng điều kiện.", "Kích thước hạt ảnh hưởng đến mức độ thấy được của chuyển động Brown."),
+        ("Khi nhiệt độ tăng, chuyển động và mức độ phân tán trở nên rõ hơn.", "Nhiệt độ làm thay đổi chuyển động nhiệt của các phân tử và hạt."),
+        ("Khung phóng đại cho thấy các phân tử chạm vào hạt từ nhiều hướng.", "Va chạm không cân bằng tại từng thời điểm làm hạt đổi trạng thái chuyển động."),
+        ("Hai hạt khác nhau có những đường đi khác nhau dù đặt cùng điều kiện.", "Độ ngẫu nhiên của từng lần thử không phủ nhận quy luật của số liệu trung bình."),
+        ("Vùng mực lan rộng dần trong nước khi thời gian quan sát tăng.", "Khuếch tán là kết quả tập thể của chuyển động nhiệt hỗn loạn."),
+        ("Điều chỉnh nhiệt độ hoặc kích thước hạt có thể đưa chỉ số qua ngưỡng mục tiêu.", "Thay điều kiện rồi kiểm chứng bằng số đo, không chỉ bằng cảm giác nhìn."),
+    ],
+    "river-step": [
+        ("Sa bàn thể hiện thượng nguồn, khúc uốn và cửa sông ở các độ cao khác nhau.", "Dòng sông xói mòn, vận chuyển rồi bồi tụ vật liệu theo điều kiện dòng chảy."),
+        ("Ở miền núi, dòng chảy nhanh làm lòng sông xói sâu, tạo mặt cắt hẹp hình chữ V.", "Độ dốc lớn thường tăng khả năng xói sâu và vận chuyển hạt lớn."),
+        ("Khi sông phát triển, mặt cắt thung lũng mở rộng hơn.", "Sự thay đổi độ dốc và hướng xói mòn làm hình dạng thung lũng thay đổi."),
+        ("Ra cửa núi, dòng chảy chậm hơn và những hạt lớn lắng trước.", "Hạt lớn cần dòng chảy mạnh để được vận chuyển; khi vận tốc giảm, chúng bồi tụ."),
+        ("Bờ lõm của khúc uốn xói mạnh; bờ lồi dễ tích tụ vật liệu.", "Xói mòn và bồi tụ cùng làm dòng sông đổi hình theo thời gian."),
+        ("Nước lũ phủ bãi ven sông; khi rút, trầm tích có thể ở lại.", "Bãi bồi được hình thành qua nhiều đợt ngập và lắng vật liệu."),
+        ("Phù sa lắng ở cửa sông làm phần đất nhô dần ra biển.", "Đồng bằng châu thổ xuất hiện khi khả năng mang vật liệu giảm ở cửa sông."),
+        ("Khi điều kiện đủ yếu, giới hạn cỡ hạt vận chuyển giảm xuống dưới 10 mm.", "Khả năng vận chuyển phụ thuộc điều kiện dòng chảy, không cố định ở mọi đoạn sông."),
+    ],
+}
